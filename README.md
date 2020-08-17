@@ -12,6 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Angular Running Instructions
 
 type npm install --save bootstrap@4 @ng-bootstrap/ng-bootstrap @swimlane/ngx-charts command in terminal for the charts display.
+npm start for running the project .
 
 ## Development server
 
