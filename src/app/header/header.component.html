@@ -1,0 +1,66 @@
+<html>
+<header>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<link href="header.component.css">
+  <style>
+    .font {
+      font-size: xxx-large;
+      color: white;
+      letter-spacing: 0.075em;
+      padding-bottom: 10px;
+      font-family: 'Permanent Marker', cursive;
+    }
+    .nav-item{
+        margin-top: -60px;
+    }
+  </style>
+
+</header>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark "
+    style=" background: black; padding-top: 10px; padding-bottom: 0px;"
+    id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" class="font">STOCKS</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars ml-1"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <div *ngIf="!loginck(); then thenBlock else elseBlock"></div>
+          <ng-template #thenBlock>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" style="padding-top: 1px;"
+                routerLink="home">Home</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" style="padding-top: 1px;"
+                  routerLink="nsebse">NSE/BSE</a></li>
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" style="padding-top: 1px;"
+                    routerLink="company">Companies Stock</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" style="padding-top: 1px;"
+                routerLink="login">Login/Signup</a></li>
+          </ng-template>
+          <ng-template #elseBlock>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" style="padding-top: 1px;"
+                routerLink="trial">Home</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" style="padding-top: 1px;"
+                  routerLink="nsebse">NSE/BSE</a></li>
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" style="padding-top: 1px;"
+                    routerLink="company">Companies Stock</a></li>
+              <li class="nav-item"><a class="nav-link js-scroll-trigger" style="padding-top: 1px;"
+                  routerLink="updatecust">{{getName()}}</a></li>
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" style="padding-top: 1px;"
+                    (click)="logout()">logout</a></li>
+            </ng-template>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</body>
+
+</html>

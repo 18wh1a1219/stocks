@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login or Register</title>
+    <link href = "login.component.css">
+    <script>
+        var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = window.location.search.substring(1),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true :
+                        decodeURIComponent(sParameterName[1]);
+                }
+            }
+        };
+        if (getUrlParameter('register') == 'true') {
+            document.getElementById('flipcard-inner').style.transform = 'rotateY(180deg)';
+        }
+
+    </script>
+    <style>
+        .body {
+            background-image: url('assets/st.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body class="body">
+
+
+    <div class="wrap" style="margin-top: 20px;">
+        <input type="checkbox" id="form_switch" style="display: none;">
+        <div class="flipcard">
+            <div class="flipcard-inner">
+                <div class="flipcard-front">
+                    <form class="login-form" #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm.value)" novalidate>
+                        <div class="form-header">
+                            <h3>Login </h3>
+
+                        </div>
+                        <!--Email Input-->
+                        <div class="form-group validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                            <input type="text" class="form-input" name="email" placeholder="enter email"
+                                [(ngModel)]="user.email">
+                        </div>
+                        <!--Password Input-->
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="password" placeholder="password"
+                                [(ngModel)]="user.password">
+                        </div>
+                        <!--Login Button-->
+                        <div class="form-group validate-input" data-validate="Password is required">
+                            <button class="form-button" type="submit">Login</button>
+                        </div>
+
+                        <div class="form-footer">
+                            Don't have an account? <label class="label-highlight" for="form_switch">
+                                Sign Up </label>
+                        </div>
+                    </form>
+                   
+                </div>
+                <div class="flipcard-back">
+                    <form class="login-form" action="">
+                        <div class="form-header">
+                            <h3>Sign up </h3>
+
+                        </div>
+                        <!--Email Input-->
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="name" placeholder="user name"
+                                [(ngModel)]="newUser.userName">
+                        </div>
+                        <!--Password Input-->
+                        <div class="form-group">
+                            <input type="email" class="form-input" name="email" placeholder="email"
+                                [(ngModel)]="newUser.email">
+                        </div>
+                        <!--Password Input-->
+
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="password" placeholder="password"
+                                [(ngModel)]="newUser.password">
+                        </div>
+                        <!--Login Button-->
+                        <div class="form-group">
+                            <button class="form-button form-button-register" type="submit" (click)="regSubmit()">Sign
+                                up</button>
+                        </div>
+                        <div class="form-footer">
+                            Already have an account? <label class="label-highlight" for="form_switch">
+                                Login</label>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </body>
+        </html>
