@@ -1,6 +1,6 @@
 # Stock
 
-## Eclipse Instructions
+## Eclipse Running Instructions
 
 Download the Stock folder and attach a tomcat 9.0 server in build path in eclipse
 
@@ -8,6 +8,10 @@ Download the Stock folder and attach a tomcat 9.0 server in build path in eclips
 # Stocks
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
+
+## Angular Running Instructions
+
+type npm install --save bootstrap@4 @ng-bootstrap/ng-bootstrap @swimlane/ngx-charts command in terminal for the charts display.
 
 ## Development server
 
