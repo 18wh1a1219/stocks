@@ -1,3 +1,10 @@
+#Stock
+
+## Eclipse Instructions
+
+Download the Stock folder and attach a tomcat 9.0 server in build path in eclipse
+
+
 # Stocks
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
