@@ -14,6 +14,18 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 type npm install --save bootstrap@4 @ng-bootstrap/ng-bootstrap @swimlane/ngx-charts command in terminal for the charts display.
 npm start for running the project .
 
+## Output
+Login Page
+![Output](login.png)
+Home Page
+![Output](home.png)
+NSE/BSE Page
+![Output](nsebse.png)
+Company Page
+![Output](company.png)
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -39,8 +51,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-## Output
-![Output](login.png)
-![Output](home.png)
-![Output](nsebse.png)
-![Output](company.png)
